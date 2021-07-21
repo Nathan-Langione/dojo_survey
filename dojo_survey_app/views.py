@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
+def index(request):
+    context = {
+        "name": "Noelle",
+    }
+    return render(request,'index.html', context)
 
-# Create your views here.
+def result(request):
+    return HttpResponse("placeholder for result")
